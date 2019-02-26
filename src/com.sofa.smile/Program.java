@@ -30,7 +30,7 @@ public class Program {
         System.out.println("----------------------");
 
         // Task 3
-        People people = new People("Sofia", "Diakonova", new Address("Shevchenka"));
+        People people = new People("Sofia", "Diakonova", new Address("Shevchenko"));
         System.out.println(people.getAdress().getStreet());
         System.out.println("----------------------");
 
