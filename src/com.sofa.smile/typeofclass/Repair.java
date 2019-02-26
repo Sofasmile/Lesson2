@@ -1,4 +1,4 @@
-package type_of_class;
+package typeofclass;
 
 public interface Repair {
     void paintWall();

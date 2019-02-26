@@ -1,20 +1,14 @@
 package immutable;
 
 public final class People {
-    private final int age;
     private final String name;
     private final String surname;
     private final Address adress;
 
-    public People(int age, String name, String surname, Address adress) {
-        this.age = age;
+    public People(String name, String surname, Address adress) {
         this.name = name;
         this.surname = surname;
-        this.adress = new Address(adress.getStreet());
-    }
-
-    public int getAge() {
-        return age;
+        this.adress = (adress == null) ? new Address("") : new Address(adress.getStreet());
     }
 
     public String getName() {
@@ -26,6 +20,6 @@ public final class People {
     }
 
     public Address getAdress() {
-        return (Address) adress.clone();
+        return new Address(adress.getStreet());
     }
 }

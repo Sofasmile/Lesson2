@@ -1,21 +1,23 @@
-import builder_realize.*;
+import builderrealize.Student;
 import immutable.Address;
 import immutable.People;
-import static_sort.*;
-import type_of_class.Flat;
+import staticsort.Sort;
+import typeofclass.Flat;
 
 import java.util.Arrays;
 import java.util.Random;
 
 public class Program {
-
     public static void main(String[] args) {
         // Task 1
-        Builder builder = new Employee();
-        Architect architect = new Architect(builder);
-        architect.buil();
-        House house = builder.result();
-        house.showResult();
+        Student student = Student.newBuilder()
+                .setName("Sofia")
+                .setSurname("Diakonova")
+                .setAge(20)
+                .setStugentNumber("kv123456789")
+                .setAverageMark(4.5)
+                .build();
+        System.out.println(student.toString());
         System.out.println("----------------------");
 
         // Task 2
@@ -28,7 +30,7 @@ public class Program {
         System.out.println("----------------------");
 
         // Task 3
-        People people = new People(20, "Sofia", "Diakonova", new Address("Shevchenka"));
+        People people = new People("Sofia", "Diakonova", new Address("Shevchenka"));
         System.out.println(people.getAdress().getStreet());
         System.out.println("----------------------");
 
@@ -45,5 +47,7 @@ public class Program {
         System.out.println(Arrays.toString(Sort.quickSort(array)));
         System.out.println(Arrays.toString(Sort.selectionSort(array)));
         System.out.println(Arrays.toString(Sort.shellSort(array)));
+
     }
 }
+
