@@ -8,7 +8,7 @@ public final class People {
     public People(String name, String surname, Address adress) {
         this.name = name;
         this.surname = surname;
-        this.adress = (adress == null) ? new Address(null) : new Address(adress.getStreet());
+        this.adress = (adress == null) ? null : new Address(adress.getStreet());
     }
 
     public String getName() {
@@ -20,6 +20,6 @@ public final class People {
     }
 
     public Address getAdress() {
-        return new Address(adress.getStreet());
+        return (adress == null) ? null : new Address(adress.getStreet());
     }
 }

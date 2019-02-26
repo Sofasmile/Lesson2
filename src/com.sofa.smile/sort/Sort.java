@@ -1,4 +1,4 @@
-package staticsort;
+package sort;
 
 import java.util.Arrays;
 
@@ -38,7 +38,7 @@ public class Sort {
     //Selection Sort
     public static int[] selectionSort(int[] array) {
         int[] arr = Arrays.copyOf(array, array.length);
-        int min, temp;
+        int min;
         for (int i = 0; i < arr.length - 1; i++) {
             min = i;
             for (int j = i + 1; j < arr.length; j++) {

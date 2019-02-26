@@ -1,8 +1,8 @@
-import builderrealize.Student;
+import build.realize.Student;
 import immutable.Address;
 import immutable.People;
-import staticsort.Sort;
-import typeofclass.Flat;
+import sort.Sort;
+import inside.Flat;
 
 import java.util.Arrays;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package builderrealize;
+package build.realize;
 
 public class Student {
     private String name;

@@ -1,4 +1,4 @@
-package typeofclass;
+package inside;
 
 public class Flat {
     private int squareMeters;
