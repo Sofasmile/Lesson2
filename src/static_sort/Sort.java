@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Sort {
 
-        // Bubble Sort
-    public static int[] bubbleSort(int [] array) {
+    // Bubble Sort
+    public static int[] bubbleSort(int[] array) {
         for (int i = array.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (array[j] > array[j + 1]) {
@@ -19,7 +19,7 @@ public class Sort {
     }
 
     // Insertion Sort
-    public static int[] insertionSort(int [] array) {
+    public static int[] insertionSort(int[] array) {
         int temp, j;
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] > array[i + 1]) {
@@ -33,11 +33,11 @@ public class Sort {
                 array[j] = temp;
             }
         }
-      return array;
+        return array;
     }
 
     //Selection Sort
-    public static int[] selectionSort(int []array) {
+    public static int[] selectionSort(int[] array) {
         int min, temp;
         for (int i = 0; i < array.length - 1; i++) {
             min = i;
@@ -53,7 +53,7 @@ public class Sort {
     }
 
     // Shell Sort
-    public static int[] shellSort(int [] array) {
+    public static int[] shellSort(int[] array) {
         int j;
         for (int div = array.length / 2; div > 0; div /= 2) {
             for (int i = div; i < array.length; i++) {
@@ -68,7 +68,7 @@ public class Sort {
     }
 
     // Quick Sort
-    public static int[] quickSort(int [] array) {
+    public static int[] quickSort(int[] array) {
         int left = 0;
         int right = array.length - 1;
         long timeBefore = System.currentTimeMillis();
@@ -76,10 +76,10 @@ public class Sort {
     }
 
     // Quick Sort continuation 1
-    private static int[] quick(int [] array, int left, int right) {
+    private static int[] quick(int[] array, int left, int right) {
         int index = partition(array, left, right);
         if (left < index - 1) {
-            quick(array,left, index - 1);
+            quick(array, left, index - 1);
         }
         if (index < right) {
             quick(array, index, right);
@@ -88,7 +88,7 @@ public class Sort {
     }
 
     // Quick Sort continuation 2
-    private static int partition(int [] array, int left, int right) {
+    private static int partition(int[] array, int left, int right) {
         int i = left, j = right;
         int tmp;
         int middle = array[(left + right) / 2];

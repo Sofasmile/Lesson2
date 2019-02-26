@@ -17,8 +17,9 @@ public class Employee extends Builder {
     public void buildRoof() {
         house.addPart("Roof");
     }
+
     @Override
-    public House result(){
+    public House result() {
         return house;
     }
 }
